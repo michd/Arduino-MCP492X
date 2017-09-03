@@ -1,3 +1,27 @@
+/*
+ * MCP4921/MCP4922 12 bit DAC Library
+ * By MichD
+ *
+ * GitHub: https://github.com/michd/Arduino-MCP492X
+ *
+ * The Microchip MCP4921 and MCP4922 are 12 bit digital to analog converters
+ * with an SPI interface. The MCP4921 has one DAC output, the MCP4922 has two.
+ *
+ * This library is built around the Arduino default SPI library and uses the
+ * designated SPI pins, in addition to a configurable chip select pin, passed
+ * in the constructor.
+ * Look up the designated pins for your arduino board, and wire up as follows:
+ *
+ * | Arduino | MCP492X   | MCP4921 pin | MCP4922 pin |
+ * |---------|-----------|-------------|-------------|
+ * | SCK     | SCK       | 3           | 4           |
+ * | MOSI    | SDI       | 4           | 5           |
+ * | your CS | CS        | 2           | 3           |
+ * 
+ * Where "your CS" is whichever pin you'd like to use as chip select on
+ * your arduino board.
+ */
+
 #include <SPI.h>
 #include "MCP492X.h"
 

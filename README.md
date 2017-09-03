@@ -20,6 +20,32 @@ Where "your CS" is whichever pin you'd like to use as chip select on your arduin
 
 You can google "(your arduino board) pinout" to find pin diagrams. Look for a diagram that includes the SCK/MOSI/MISO designators. For example, for the Arduino Pro Micro board, you'd search "Arduino pro micro pinout"
 
+### Installing the library
+
+#### Method 1: ZIP file
+
+1. Download this repository as a .ZIP file: [Download Arduino-MCP492X](https://github.com/michd/Arduino-MCP492X/archive/master.zip)
+2. Open Arduino IDE
+3. Click Sketch > Include Library > Add .ZIP library...
+4. Select the library
+5. Click Sketch > Include Library > Contributed Libraries > MCP492X
+
+Note: This will install the library on your computer but will not include it within your project if you were to transfer the files to someone else. If you want it all-in-one, I recommend method 2.
+
+#### Method 2: Include in your project folder
+
+You can also save the .h and .cpp files directly in you arduino project's folder, and then reference it as follows:
+
+```cpp
+#include "MCP492X.h"
+```
+
+You may want to consider making a directory for just libraries though, if you project consists of several files. If the directory inside your project directory called "libs", the include line changes to:
+
+```cpp
+#include "libs/MCP492X.h"
+```
+
 ### Code
 
 This is the bare minimum to get started with one of these DACs in an Arduino project:
