@@ -23,6 +23,7 @@
  */
 
 #include <Arduino.h>
+#include <SPI.h>
 
 // Ensure we don't double-define the functionality
 #ifndef MCP492X_h
