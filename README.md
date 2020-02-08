@@ -51,11 +51,11 @@ You may want to consider making a directory for just libraries though, if you pr
 This is the bare minimum to get started with one of these DACs in an Arduino project:
 
 ```cpp
-#include <MCP49X.h> // Include the library
+#include <MCP492X.h> // Include the library
 
 #define PIN_SPI_CHIP_SELECT_DAC 9 // Or any pin you'd like to use
 
-MCP492X myDac(PIN_SPI_CHIP_SELECT);
+MCP492X myDac(PIN_SPI_CHIP_SELECT_DAC);
 
 void setup() {
   // put your setup code here, to run once:
